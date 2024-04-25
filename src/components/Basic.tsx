@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function Basics() {
     const [bool, setBool] = useState<boolean>(false);
     return <div>
-        <div className="border-[1px] py-1 px-2 rounded mt-4">
+        <div className="border-[1px] py-1 px rounded mt-4">
             <div className="flex gap-1">
                 <div onClick={() => {
                     setBool(false);

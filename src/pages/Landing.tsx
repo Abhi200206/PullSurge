@@ -22,7 +22,7 @@ export default function Landing({ children }: { children: React.ReactNode }) {
                 <div>
                     <p className="font-bold text-[20px] w-[100px] bg-gradient-to-r from-blue-500 to-red-300">PullSurge</p>
                 </div>
-               <a href="https://github.com/Abhi200206?tab=repositories"> <div  className="bg-black  px-2 text-white rounded cursor-pointer">
+               <a href="https://github.com/Abhi200206/PullSurge"> <div  className="bg-black  px-2 text-white rounded cursor-pointer">
                     <p>Github </p>
                 </div></a>
             </div>
