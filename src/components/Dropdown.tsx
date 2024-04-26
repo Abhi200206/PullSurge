@@ -3,7 +3,7 @@ import { useSetRecoilState } from "recoil";
 import { methodAtom } from "../store/atoms/atoms";
 export default function Dropdown({  setBool }: { setBool: React.Dispatch<React.SetStateAction<boolean>> }) {
     const setMethod=useSetRecoilState(methodAtom);
-    return <div className="flex flex-col gap-2 rounded p-1 bg-slate-100 absolute top-[155px] md:top-[100px] z-2">
+    return <div className="flex flex-col gap-2 rounded p-1 bg-slate-100 absolute top-[175px] md:top-[100px] z-2">
         <p onClick={() => {
             setMethod(methodValues.post);
             setBool(false);
