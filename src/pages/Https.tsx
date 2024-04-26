@@ -43,13 +43,13 @@ export default function Https() {
         }
     }
     return (
-        <div className="flex">
-            <div className="flex-1">
-                <div className="flex justify-center mt-4">
-                    <div className="flex gap-2">
+        <div className="md:flex">
+            <div className="md:flex-1">
+                <div className="md:flex md:justify-center mt-4">
+                    <div className="md:flex md:gap-2 mx-4">
                         <div><Dropdownmenu /></div>
-                        <div className="bg-red-500">
-                            <input onChange={(e) => { setUrl(e.target.value) }} className="border-[1px] p-1 w-[400px]" type="text" placeholder="enter url." />
+                        <div >
+                            <input onChange={(e) => { setUrl(e.target.value) }} className="border-[1px] p-1 w-full md:w-[400px]" type="text" placeholder="enter url." />
                         </div>
                         <div onClick={Axios} className="rounded px-4 py-1 bg-black text-center text-white cursor-pointer">
                             <p>Send</p>
@@ -60,7 +60,7 @@ export default function Https() {
                     <Basics />
                 </div>
             </div>
-            <div className="flex-1">
+            <div className="md:flex-1">
                 {loading ? <Loading /> : <Result />}
             </div>
         </div>

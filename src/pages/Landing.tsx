@@ -26,15 +26,15 @@ export default function Landing({ children }: { children: React.ReactNode }) {
                     <p>Github </p>
                 </div></a>
             </div>
-            <div className="flex flex-grow">
-                <div className="flex justify-center border-[1px] w-1/12">
-                    <div className="my-[10px] flex flex-col gap-4">
+            <div className="md:flex md:flex-grow">
+                <div className=" md:flex md:justify-center border-[1px] md:w-1/12">
+                    <div className="flex justify-center my-2 gap-4 mx-2 md:my-[10px] md:flex md:justify-start md:flex-col md:gap-6">
                         <Http cb={http}/>
                         <Ws cb={ws} />
                         <Setting cb={sett}/>
                     </div>
                 </div>
-                <div className="w-11/12">
+                <div className="md:w-11/12">
                     {children}
                 </div>
             </div>

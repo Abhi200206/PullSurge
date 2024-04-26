@@ -45,12 +45,12 @@ export default function Websockets() {
         setSocket(newSocket);
     }
 
-    return <div className="flex justify-center items-center">
+    return <div className="md:flex  md:justify-center mx-2 md:items-center">
         <div>
             <p className="font-bold">Web sockets</p>
             <br />
-            <div className="flex gap-4">
-                <input value={url} onChange={(e) => enter(e)} className="border-black border-[1px] w-[350px] p-1 " type="text" placeholder="enter url" />
+            <div className="md:flex md:gap-4">
+                <input value={url} onChange={(e) => enter(e)} className="border-black border-[1px] w-full md:w-[350px] p-1 " type="text" placeholder="enter url" />
                 <div onClick={connect} className="rounded border-[1px] bg-black px-2 cursor-pointer text-white text-center "><p>connect</p></div>
                 <div className="rounded border-[1px] bg-black px-2 cursor-pointer text-white text-center " onClick={disconnect}>Disconnect</div>
             </div>
@@ -58,11 +58,11 @@ export default function Websockets() {
                 <p className="text-slate-500">Connection Satus: </p>
                 <p className={connectionStatus == "connected" ? "text-green-500" : "text-red-500"}>{connectionStatus}</p>
             </div>
-            <div className="flex gap-4">
+            <div className="md:flex md:gap-4">
                 <div className="border-[1px] p-2 ">
                     <p>Message Body</p>
                     <div>
-                        <div ><input value={msg} onChange={(e) => setMsg(e.target.value)} type="text" className="border-black border-[1px] w-[350px] p-1 " name="" id="" /></div>
+                        <div ><input value={msg} onChange={(e) => setMsg(e.target.value)} type="text" className="border-black m-1 border-[1px] w-full md:w-[350px] p-1 " name="" id="" /></div>
                         <div className="cursor-pointer bg-black text-white text-center" onClick={sendMessage}><p>send</p></div>
                     </div>
                 </div>
