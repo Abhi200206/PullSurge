@@ -66,7 +66,7 @@ export default function Websockets() {
                         <div className="cursor-pointer bg-black text-white text-center" onClick={sendMessage}><p>send</p></div>
                     </div>
                 </div>
-                <div className="border-[1px] w-[500px] p-2 ">
+                <div className="border-[1px] w-full md:w-[500px] p-2 ">
                     <p className="font-bold">Message Received From server:</p>
                     <p>{message}</p>
                 </div>

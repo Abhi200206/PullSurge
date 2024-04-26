@@ -13,7 +13,7 @@ export default function Body()
             <div><p className="text-slate-500">Content-Type-application/json</p></div>
         </div>
         <div>
-        <textarea onChange={(e)=>change(e)} value={body} className="border-[1px] border-black rounded p-2 w-full h-[350px]">
+        <textarea onChange={(e)=>change(e)} value={body} className="border-[1px] border-black rounded p-2 w-full h-[300px] md:h-[350px]">
                </textarea>
         </div>
     </div>
