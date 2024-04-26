@@ -51,8 +51,8 @@ export default function Websockets() {
             <br />
             <div className="md:flex md:gap-4">
                 <input value={url} onChange={(e) => enter(e)} className="border-black border-[1px] w-full md:w-[350px] p-1 " type="text" placeholder="enter url" />
-                <div onClick={connect} className="rounded border-[1px] bg-black px-2 cursor-pointer text-white text-center "><p>connect</p></div>
-                <div className="rounded border-[1px] bg-black px-2 cursor-pointer text-white text-center " onClick={disconnect}>Disconnect</div>
+                <div onClick={connect} className="rounded border-[1px] my-2 md:my-0 bg-black px-2 cursor-pointer text-white text-center "><p>connect</p></div>
+                <div className="rounded border-[1px] bg-black px-2 my-2 md:my-0 cursor-pointer text-white text-center " onClick={disconnect}>Disconnect</div>
             </div>
             <div className="flex gap-2 mt-2 mb-6">
                 <p className="text-slate-500">Connection Satus: </p>
