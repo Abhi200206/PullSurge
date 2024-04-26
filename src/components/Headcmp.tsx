@@ -13,8 +13,8 @@ export default function Headcmp({id}:{id:number}) {
         });
 
     }
-    return <div className="flex gap-2 my-1">
-        <div><input value={head.key} onChange={(e)=>setvalues(e)} className="border-black border-[1px]" type="text" name="key" /> </div>
-        <div><input value={head.value} onChange={(e)=>setvalues(e)} className="border-black border-[1px]" type="text" name="value" /></div>
+    return <div className="flex gap-1 md:gap-2 my-1">
+        <div><input value={head.key} onChange={(e)=>setvalues(e)} className="border-black w-full border-[1px]" type="text" name="key" /> </div>
+        <div><input value={head.value} onChange={(e)=>setvalues(e)} className="border-black w-full border-[1px]" type="text" name="value" /></div>
     </div>
 }
