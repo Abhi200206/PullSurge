@@ -22,6 +22,7 @@ export default function Https() {
             setLoading(false);
         }, 30000);
         try {
+            console.log("start")
             let result = await axios({
                 method: method,
                 url: url,
@@ -31,6 +32,8 @@ export default function Https() {
                     'Content-Type': 'application/json'
                 }
             });
+            console.log("end")
+            console.log(result.data);
             setResult(JSON.stringify(result.data));
             setLoading(false);
             clearTimeout(timeout);

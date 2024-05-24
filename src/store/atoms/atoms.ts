@@ -31,9 +31,9 @@ export const headersAtom = atomFamily({
         value: ""
     })
 });
-export const arrAtom = atom({
+export const arrAtom = atom<number []>({
     key: "arrAtom",
-    default: [1]
+    default: []
 });
 export const headselector = selector({
     key: "headselector",
