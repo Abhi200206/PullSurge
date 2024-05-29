@@ -1,5 +1,5 @@
 import Headcmp from "./Headcmp";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { arrAtom } from "../store/atoms/atoms";
 export default function Header() {
     const [arr, setArr] = useRecoilState(arrAtom);
