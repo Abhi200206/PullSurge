@@ -1,14 +1,16 @@
 import Basics from "../components/Basic";
 import Dropdownmenu from "../components/Dropdownmenu";
-import { useSetRecoilState } from "recoil";
+import { useSetRecoilState,useRecoilState } from "recoil";
 import axios from "axios";
 import { useRecoilValue } from "recoil";
 import { urlAtom, bodyAtom, methodAtom, resultAtom, headselector } from "../store/atoms/atoms";
 import Result from "../components/Result";
 import { useState } from "react";
 import Loading from "../components/Loading";
+import { arrAtom ,headersAtom} from "../store/atoms/atoms";
 export default function Https() {
     const setUrl = useSetRecoilState(urlAtom);
+    const [arr, setArr] = useRecoilState(arrAtom);
     let method = useRecoilValue(methodAtom);
     let url = useRecoilValue(urlAtom);
     let data = useRecoilValue(bodyAtom);
@@ -22,7 +24,6 @@ export default function Https() {
             setLoading(false);
         }, 30000);
         try {
-            console.log("start")
             let result = await axios({
                 method: method,
                 url: url,
@@ -32,8 +33,6 @@ export default function Https() {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log("end")
-            console.log(result.data);
             setResult(JSON.stringify(result.data));
             setLoading(false);
             clearTimeout(timeout);

@@ -31,6 +31,7 @@ export const headersAtom = atomFamily({
         value: ""
     })
 });
+
 export const arrAtom = atom<number []>({
     key: "arrAtom",
     default: []
