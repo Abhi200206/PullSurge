@@ -14,11 +14,11 @@ export default function Landing({ children }: { children: React.ReactNode }) {
     function sett()
     {
         navigate("/setting");
-    }
+    }   
     
     return (
         <div className="h-screen flex flex-col ">
-            <div className="flex justify-between mx-2 h-[50px] border-[1px] items-center">
+            <div className="flex justify-between mx-2 h-[50px] border-[1px] items-center bg-slate-50 sticky top-0 py-2">
                 <div>
                     <p className="font-bold text-[20px] w-[100px] bg-gradient-to-r from-blue-500 to-red-300">PullSurge</p>
                 </div>

@@ -60,7 +60,7 @@ export default function Https() {
                     <Basics />
                 </div>
             </div>
-            <div className="md:flex-1">
+            <div className="md:flex-1 overflow-auto">
                 {loading ? <Loading /> : <Result />}
             </div>
         </div>
