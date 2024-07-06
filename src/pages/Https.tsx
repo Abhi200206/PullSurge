@@ -38,12 +38,20 @@ export default function Https() {
             clearTimeout(timeout);
         }
         catch (err:any) {
-            setSatus(err.response.status);
-            setResult(JSON.stringify(err.response.data));
+            console.log(err);
+            if(err.response)
+            {
+                console.log("inside");
+                setSatus(err.response.status);
+                setResult(JSON.stringify(err.response.data));
+            }
+            else{
+                setSatus(500);
+                setResult("timeout , No response from server !");
+            }
             setLoading(false);
             clearTimeout(timeout);
-            setSatus(404);
-
+            
         }
     }
     return (
