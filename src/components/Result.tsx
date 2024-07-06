@@ -14,7 +14,7 @@ export default function Result({status}:{status:number})
            </div>
         </div>
         <div>
-            <p>{result}</p>
+            <p className=" whitespace-pre-wrap">{result}</p>
         </div>
     </div>
 }
