@@ -15,6 +15,7 @@ export default function Https() {
     const headers = useRecoilValue(headselector);
     const setResult = useSetRecoilState(resultAtom);
     const [loading, setLoading] = useState<boolean>(false);
+    const [status,setSatus]=useState<any>(null);
     async function Axios() {
         setLoading(true);
         let timeout=setTimeout(() => {
@@ -31,12 +32,16 @@ export default function Https() {
                     'Content-Type': 'application/json'
                 }
             });
+            console.log(result);
+            setSatus(result.status);
             setResult(JSON.stringify(result.data));
             setLoading(false);
             clearTimeout(timeout);
         }
-        catch (err) {
-            setResult(JSON.stringify(err));
+        catch (err:any) {
+            console.log(err.response.status);
+            setSatus(err.response.status);
+            setResult(JSON.stringify(err.response.data));
             setLoading(false);
             clearTimeout(timeout);
 
@@ -61,7 +66,7 @@ export default function Https() {
                 </div>
             </div>
             <div className="md:flex-1 overflow-auto">
-                {loading ? <Loading /> : <Result />}
+                {loading ? <Loading /> : <Result status={status} />}
             </div>
         </div>
     );
