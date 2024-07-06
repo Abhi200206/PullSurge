@@ -32,18 +32,17 @@ export default function Https() {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log(result);
             setSatus(result.status);
             setResult(JSON.stringify(result.data));
             setLoading(false);
             clearTimeout(timeout);
         }
         catch (err:any) {
-            console.log(err.response.status);
             setSatus(err.response.status);
             setResult(JSON.stringify(err.response.data));
             setLoading(false);
             clearTimeout(timeout);
+            setSatus(404);
 
         }
     }
