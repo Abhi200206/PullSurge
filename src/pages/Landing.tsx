@@ -20,7 +20,7 @@ export default function Landing({ children }: { children: React.ReactNode }) {
         <div className="h-screen flex flex-col ">
             <div className="flex justify-between mx-2 h-[50px] border-[1px] items-center bg-slate-50 sticky top-0 py-2">
                 <div>
-                    <p className="font-bold text-[20px] w-[100px] bg-gradient-to-r from-blue-500 to-red-300">PullSurge</p>
+                    <p className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-400">PullSurge</p>
                 </div>
                <a href="https://github.com/Abhi200206/PullSurge"> <div  className="bg-black  px-2 text-white rounded cursor-pointer">
                     <p>Github </p>
